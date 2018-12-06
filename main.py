@@ -1,10 +1,10 @@
 from flask import Flask, request
+from caesar import rotate_string 
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-def form(DF):
-        """<!DOCTYPE html>
+DF = """<!DOCTYPE html>
 
 <html>
     <head>
@@ -39,13 +39,16 @@ def form(DF):
 
 app.run()
 
-@app.route("/)
 
-def encrpt():
+def encrypt():
+    rot = int(request.form["number"])
+    text = request.form["text"] 
+    return rotate_string(rot,text)
 
-@app.route("/") , methods=["POST"]
 
+@app.route('/', methods=['POST'])
+
+@app.route('/')
 def index():
     return DF
 
-from caesar import rotate_string 
