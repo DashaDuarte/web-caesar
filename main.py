@@ -30,7 +30,7 @@ DF = """<!DOCTYPE html>
       <label for ="name">Rot:</label>
       <input id="number" type="number" value="0">
       <label for="comment">Comment:</label>
-      <textarea name="text"></textarea>
+      <textarea name="text">{}</textarea>
       <button type="submit">Submit Comment</button>
     </form>
 
